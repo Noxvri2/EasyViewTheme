@@ -1,14 +1,13 @@
 /**
  * @name Easy View
  * @author NØXVRI (Kori)#9387
- * @version 1.0.0
+ * @version 1.0.1
  * @invite https://discord.gg/tqjnJjkRgj
  * @description gives discord a generally more pleasant look for those who like a somewhat vanilla look
  * @source: a lot of copy pasted code tbh
  * @website https://da-lounge.netlify.app/index.html#home
  --------------------------------------------------------------------------------------------------------
 */
-
 
 
 
@@ -24,20 +23,14 @@
 
 
 
-/*dictates postioning margins, made using a repo */
+
+
 :root {
   --HSL-server-icon-size: 40px;  /* Size of the server icons | DEFAULT: 40px */
   --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
 }
 
 
-
-/* customizable bg, must be a valid link ending in; .jpg, .jpeg, .gif, .png */
-
-:root {
-  --background-image: url('');
-  --opacity: .9; /* that tint you see over the image, default .9 */
-}
 
 
 
@@ -46,7 +39,10 @@
 
 
 /* EVERYTHING BELOW HERE IS ABSOLUTE FUCKING CHAOS */
-/*pain*/
+
+
+@import url('https://xhylo.github.io/DmBubblesearch/SearchSC.css');
+
 
 
 
@@ -156,42 +152,7 @@
 
 
 
-/* connection borders */
-.connectedAccountIcon-3_EQqg ~ div::before {
-  content: "";
-  top: 0; bottom: 0; left: 0; right: 0;
-  border: 1px solid var(--border-color);
-  position: absolute;
-  display: block;
-  pointer-events: none;
-}
 
-.connectedAccount-2Jb-Z0 {
-  overflow: hidden;
-  position: relative;
-}
-/* Spotify */
-.connectedAccountIcon-3_EQqg[src="/assets/7906941c1205ba04b6921f2af4c6a170.png"] ~ div::before {--border-color: #1ED760;}
-/* Github */
-.connectedAccountIcon-3_EQqg[src="/assets/afb09840b496f2c49032075a33da7fab.png"] ~ div::before {--border-color: #fff;}
-/* Twitch */
-.connectedAccountIcon-3_EQqg[src="/assets/007e5cb8871cf0987283c6307ce7fed0.png"] ~ div::before {--border-color: #563194;}
-/* Twitter */
-.connectedAccountIcon-3_EQqg[src="/assets/6919f2a578d91a5d033b639f0fb52b3d.png"] ~ div::before {--border-color: #0099E4;}
-/* xbox */
-.connectedAccountIcon-3_EQqg[src="/assets/746aba83c88f087e3eef23a47dd57923.png"] ~ div::before {--border-color: #5EC220;}
-/* Reddit */
-.connectedAccountIcon-3_EQqg[src="/assets/b46c06eb71dc56a41432512168e6759a.png"] ~ div::before {--border-color: #FF4500;}
-/* Battle.net */
-.connectedAccountIcon-3_EQqg[src="/assets/7b964801001dd47cc05a91d6dacf6075.png"] ~ div::before {--border-color: #0099E4;}
-/* Steam */
-.connectedAccountIcon-3_EQqg[src="/assets/a9c26c8bebe406ca1adc1967bc532224.png"] ~ div::before {--border-color: #000000;}
-/* YouTube */
-.connectedAccountIcon-3_EQqg[src="/assets/25ec573cf82ee36d12296628f6bec11b.png"] ~ div::before {--border-color: #D9252A;}
-/* Facebook */
-.connectedAccountIcon-3_EQqg[src="/assets/3d189c41ce8155dfebf86ba2d1acfbbc.png"] ~ div::before {--border-color: #2D3283;}
-/* LOL */
-.connectedAccountIcon-3_EQqg[src="/assets/a0e2182e843745c73f7f3c8325a05ea9.png"] ~ div::before {--border-color: #CEA146;}
 
 
 
@@ -268,7 +229,9 @@ button[aria-label="Send a gift"] {
 
 
 
-
+.wrapperControlsHidden-35Gtol {
+  cursor: none;
+}
 
 
 
@@ -302,3 +265,8 @@ button[aria-label="Send a gift"] {
   }
 }
 
+.search-2oPWTC:not(.open-6_Y_aH) .searchBar-3dMhjb { width: 27px; transition: 0.25s; background-color: transparent;}
+.search-2oPWTC:not(.open-6_Y_aH):hover .searchBar-3dMhjb { width: 240px; background-color: var(--background-tertiary);}
+.search-2oPWTC:not(.open-6_Y_aH) .iconContainer-O4O2CN { transform: scale(1.3); transition: 0.25s;}
+.search-2oPWTC:not(.open-6_Y_aH):hover .iconContainer-O4O2CN { transform: scale(1);}
+.icon-3cZ1F_ { color: var(--text-normal)}
