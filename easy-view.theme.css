@@ -1,0 +1,303 @@
+/**
+ * @name Easy View
+ * @author NØXVRI (Kori)#9387
+ * @version 1.0.0
+ * @invite https://discord.gg/tqjnJjkRgj
+ * @description gives discord a generally more pleasant look for those who like a somewhat vanilla look
+ * @source: a lot of copy pasted code tbh
+ * @website https://da-lounge.netlify.app/index.html#home
+ --------------------------------------------------------------------------------------------------------
+*/
+
+
+
+
+
+/* puts BetterDiscord Setting on top for ease of access */
+@import url('https://xhylo.github.io/BetterSettings/BetterSettings.css');
+
+
+
+/* KEEP ALL ADDED CODE BENEATH THIS, IF YOU WANT TO KEEP THE TOP HORIZONTAL SERVER BAR */
+
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+
+
+
+/*dictates postioning margins, made using a repo */
+:root {
+  --HSL-server-icon-size: 40px;  /* Size of the server icons | DEFAULT: 40px */
+  --HSL-server-spacing: 10px;  /* Spacing between each server icon | DEFAULT: 10px */
+}
+
+
+
+/* customizable bg, must be a valid link ending in; .jpg, .jpeg, .gif, .png */
+
+:root {
+  --background-image: url('');
+  --opacity: .9; /* that tint you see over the image, default .9 */
+}
+
+
+
+.welcomeCTAButtonOuter-2VwxSF {display : none}
+
+
+
+/* EVERYTHING BELOW HERE IS ABSOLUTE FUCKING CHAOS */
+
+
+
+/*WinMac Butons|| I do not reccomend touching this*/
+.winButton-iRh8-Z:nth-child(2) {
+  color: rgb(114, 47, 47);
+  border-radius: 2000px;
+  background-color:rgb(114, 47, 47);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+.winButtonMinMax-PBQ2gm:nth-child(4):hover {
+  color: green;
+  border-radius: 2000px;
+  background-color:rgb(55, 212, 55);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: -2px;
+  margin-left: 10px;
+}
+.winButtonMinMax-PBQ2gm:nth-child(3):hover {
+  color:rgb(141, 92, 0);
+  border-radius: 200px;
+  background-color:rgb(255, 184, 53);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: -2px;
+  margin-left: 10px;
+}
+.winButton-iRh8-Z:nth-child(2):hover {
+  color: rgb(110, 0, 0);
+  border-radius: 50%;
+  background-color:rgb(255, 70, 70);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: 8px;
+  margin-left: 10px;
+}
+.winButtonMinMax-PBQ2gm:nth-child(4) {
+  color:rgb(47, 124, 47);
+  border-radius: 200px;
+  background-color:rgb(47, 124, 47);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: -2px;
+  margin-left: 10px;
+}
+.winButtonMinMax-PBQ2gm:nth-child(3) {
+  color:rgb(141, 92, 0);
+  border-radius: 200px;
+  background-color:rgb(141, 92, 0);
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: -2px;
+  margin-left: 10px;
+}
+.winButton-iRh8-Z {
+  color: #ff5b5b;
+  transition: all 200ms ease-out;
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+  margin-right: -2px;
+  margin-left: 10px;
+}
+.winButton-iRh8-Z:hover {
+  background: transparent;
+  transform: rotate(45deg);
+  border-radius: 30px;
+  transition: all 200ms ease-out;
+} 
+
+
+
+
+/* Remove CreArts Modal Blur */
+.backdrop-1wrmKB::before, .backdropWithLayer-3_uhz4::before {backdrop-filter: none;}
+
+
+
+/* disables discords stupid fucking animations */
+
+.layer-3QrUeG {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.layers-3iHuyZ>.layer-3QrUeG.animating-rRxada *,
+.layers-3iHuyZ>.layer-3QrUeG.animating-rRxada {
+  pointer-events: auto !important;
+  will-change: unset;
+}
+
+.animating-rRxada.stop-animations {
+  z-index: 100 !important;
+}
+
+
+
+
+
+/* connection borders */
+.connectedAccountIcon-3_EQqg ~ div::before {
+  content: "";
+  top: 0; bottom: 0; left: 0; right: 0;
+  border: 1px solid var(--border-color);
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.connectedAccount-2Jb-Z0 {
+  overflow: hidden;
+  position: relative;
+}
+/* Spotify */
+.connectedAccountIcon-3_EQqg[src="/assets/7906941c1205ba04b6921f2af4c6a170.png"] ~ div::before {--border-color: #1ED760;}
+/* Github */
+.connectedAccountIcon-3_EQqg[src="/assets/afb09840b496f2c49032075a33da7fab.png"] ~ div::before {--border-color: #fff;}
+/* Twitch */
+.connectedAccountIcon-3_EQqg[src="/assets/007e5cb8871cf0987283c6307ce7fed0.png"] ~ div::before {--border-color: #563194;}
+/* Twitter */
+.connectedAccountIcon-3_EQqg[src="/assets/6919f2a578d91a5d033b639f0fb52b3d.png"] ~ div::before {--border-color: #0099E4;}
+/* xbox */
+.connectedAccountIcon-3_EQqg[src="/assets/746aba83c88f087e3eef23a47dd57923.png"] ~ div::before {--border-color: #5EC220;}
+/* Reddit */
+.connectedAccountIcon-3_EQqg[src="/assets/b46c06eb71dc56a41432512168e6759a.png"] ~ div::before {--border-color: #FF4500;}
+/* Battle.net */
+.connectedAccountIcon-3_EQqg[src="/assets/7b964801001dd47cc05a91d6dacf6075.png"] ~ div::before {--border-color: #0099E4;}
+/* Steam */
+.connectedAccountIcon-3_EQqg[src="/assets/a9c26c8bebe406ca1adc1967bc532224.png"] ~ div::before {--border-color: #000000;}
+/* YouTube */
+.connectedAccountIcon-3_EQqg[src="/assets/25ec573cf82ee36d12296628f6bec11b.png"] ~ div::before {--border-color: #D9252A;}
+/* Facebook */
+.connectedAccountIcon-3_EQqg[src="/assets/3d189c41ce8155dfebf86ba2d1acfbbc.png"] ~ div::before {--border-color: #2D3283;}
+/* LOL */
+.connectedAccountIcon-3_EQqg[src="/assets/a0e2182e843745c73f7f3c8325a05ea9.png"] ~ div::before {--border-color: #CEA146;}
+
+
+
+
+:root{background:var(--background-image) center/cover no-repeat}body{opacity:var(--opacity)}
+
+
+/*Hide sticker/nitro button in text bar*/
+.stickerButton-3OEgwj {display: none}
+
+button[aria-label="Send a gift"] {
+  display: none;
+}
+#private-channels [href="/discovery"] {display: none}
+
+/* removes nitro store tab */
+#private-channels [href="/store"] {display: none}
+
+
+
+
+/* horizontal status picker*/
+#status-picker {
+  margin-bottom: 5px;
+}
+
+#status-picker > div {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.statusItem-33LqPf {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.statusItem-33LqPf > svg {
+  width: 16px;
+  height: auto;
+}
+
+#status-picker .item-1tOPte {
+  margin: 0;
+  width: 25%;
+}
+
+#status-picker .status-1fhblQ,
+#status-picker .description-2L932D,
+#status-picker .separator-2I32lJ:nth-child(2) {
+  display: none;
+}
+
+#status-picker .separator-2I32lJ,
+#status-picker #status-picker-custom-status {
+  display: block;
+  width: 100%;
+}
+
+#status-picker-custom-status .status-1fhblQ {
+  display: block;
+  margin-left: 6px;
+}
+
+
+
+.wordmarkWindows-1v0lYD {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* settings/deafen/mute buttons animated */
+.button-14-BFJ:hover .contents-18-Yxp {
+  animation: UserModalButtons 0.5s normal ease;
+}
+.container-3baos1 .noWrap-3jynv6 {
+  width: 100px;
+  opacity: 1;
+}
+.button-14-BFJ {
+  transition: 0.2s;
+}
+.button-14-BFJ:hover {
+  padding-bottom: 0px;
+  transition: 0.2;
+}
+@keyframes UserModalButtons {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
