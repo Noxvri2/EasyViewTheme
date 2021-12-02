@@ -1,6 +1,6 @@
 /**
  * @name Easy View
- * @author NØXVRI (Kori)#9387
+ * @author Barakobop#9387
  * @version 1.0.1
  * @invite https://discord.gg/tqjnJjkRgj
  * @description gives discord a generally more pleasant look for those who like a somewhat vanilla look
@@ -44,7 +44,16 @@
 @import url('https://xhylo.github.io/DmBubblesearch/SearchSC.css');
 
 
-
+/**context error: do not touch**/
+[title^="https://discord.com/channels/"], [title^="https://ptb.discord.com/channels/"], [title^="https://canary.discord.com/channels/"]   {
+  line-height:0;
+  font-size:0;
+}
+[title^="https://discord.com/channels/"]::before, [title^="https://ptb.discord.com/channels/"]::before, [title^="https://canary.discord.com/channels/"]::before{
+  content:'Jump to Message';
+  font-size:16px;
+  font-weight:700;
+}
 
 /*WinMac Butons|| I do not reccomend touching this*/
 .winButton-iRh8-Z:nth-child(2) {
@@ -126,6 +135,19 @@
 
 
 
+/* Removes Chatbox from channel that don't allow you to communicate */
+.channelTextAreaDisabled-8rmlrp, .channelTextAreaDisabled-8rmlrp > .scrollableContainer-2NUZem{
+  animation: nochat .000001ms forwards;
+}
+@keyframes nochat{
+  to{height: 0}
+}
+/* Removes Follow banner on bottom of channels */
+.wrapper-39oAo3 {display: none;}
+
+
+
+
 /* Remove CreArts Modal Blur */
 .backdrop-1wrmKB::before, .backdropWithLayer-3_uhz4::before {backdrop-filter: none;}
 
@@ -159,7 +181,7 @@
 
 :root{background:var(--background-image) center/cover no-repeat}body{opacity:var(--opacity)}
 
-
+.tutorialContainer-30WoTp + div {display:none}
 /*Hide sticker/nitro button in text bar*/
 .stickerButton-3OEgwj {display: none}
 
@@ -170,6 +192,8 @@ button[aria-label="Send a gift"] {
 
 /* removes nitro store tab */
 #private-channels [href="/store"] {display: none}
+
+
 
 
 
